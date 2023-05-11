@@ -1,0 +1,15 @@
+{
+  "name": "arena3-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:GabrielRodriguesFerreira-TI/arena3-api.git",
+  "author": "GabrielRF <ti.gabrielef@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.3",
+    "typescript": "^5.0.4"
+  }
+}
