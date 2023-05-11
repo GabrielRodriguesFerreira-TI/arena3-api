@@ -3,7 +3,8 @@ name: Run tests
 on:
   pull_request:
     branches:
-      - develop
+      - "develop"
+      - "!Tests"
 
 jobs:
   test:
@@ -26,5 +27,4 @@ jobs:
         run: npm install --production=false
 
       - name: Run Tests
-        if: ${{ github.base_ref != 'refs/heads/Tests' }}
         run: npm run test
