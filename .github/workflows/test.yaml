@@ -26,5 +26,5 @@ jobs:
         run: npm install --production=false
 
       - name: Run Tests
-        if: ${{ github.ref != 'refs/heads/Tests' }}
+        if: ${{ github.base_ref != 'refs/heads/Tests' }}
         run: npm run test
