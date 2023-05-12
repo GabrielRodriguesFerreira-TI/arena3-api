@@ -6,6 +6,7 @@ on:
       - Tests
       - config/Server
       - config/Errors
+      - config/midiaUpload
 
 jobs:
   test:
