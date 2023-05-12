@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from "express";
-import { MongoServerError } from "mongodb";
 import { ZodError } from "zod";
 import mongoose from "mongoose";
 import { MulterError } from "multer";
@@ -27,11 +26,7 @@ const handleErros = (
     });
   }
 
-  if (
-    error instanceof MongoServerError ||
-    error instanceof TypeError ||
-    error instanceof mongoose.Error.CastError
-  ) {
+  if (error instanceof TypeError || error instanceof mongoose.Error.CastError) {
     if (error.name === "CastError") {
       return res.status(404).json({ message: error.message });
     }
@@ -45,8 +40,7 @@ const handleErros = (
   if (error instanceof MulterError) {
     return res.status(413).json({ message: error.message });
   }
-
-  return res.status(500).json({ message: error.message });
+  return res.status(500).json({ message: error.name });
 };
 
 export { AppError, handleErros };

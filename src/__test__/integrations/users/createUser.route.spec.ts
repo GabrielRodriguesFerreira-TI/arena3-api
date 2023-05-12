@@ -179,8 +179,9 @@ describe("POST /users", () => {
       status: 400,
       bodyMessage: {
         message: {
-          email: ["Required"],
-          password: ["Required"],
+          username: ["Required"],
+          firstName: ["Required"],
+          lastName: ["Required"],
         },
       },
     };
