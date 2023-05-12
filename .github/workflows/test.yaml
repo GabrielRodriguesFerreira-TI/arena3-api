@@ -5,6 +5,7 @@ on:
     branches-ignore:
       - Tests
       - config/Server
+      - config/Errors
 
 jobs:
   test:
