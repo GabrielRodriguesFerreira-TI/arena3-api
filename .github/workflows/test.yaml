@@ -6,6 +6,7 @@ on:
       - develop
     branches-ignore:
       - Tests
+      - config/Server
 
 jobs:
   test:
