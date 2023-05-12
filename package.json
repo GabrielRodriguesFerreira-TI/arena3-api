@@ -1,14 +1,14 @@
 {
   "name": "arena3-api",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --ignore-watch node_modules --cls --rs src/server.ts",
     "test": "jest --verbose --runInBand --passWithNoTests",
     "build": "tsc",
-    "start:dev": "node dist/server.js"
+    "start": "node dist/server.js"
   },
-  "repository": "git@github.com:GabrielRodriguesFerreira-TI/arena3-api.git",
   "author": "GabrielRF <ti.gabrielef@gmail.com>",
   "license": "ISC",
   "dependencies": {
